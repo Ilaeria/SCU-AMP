@@ -20,8 +20,9 @@
 	<style>
 		header, nav, main, footer, figure, figcaption { display: block; }
 		body { font-family:Verdana, Arial, sans-serif; background-color: #00005D; }
-		#wrapper { 	background-color: #b3c7e6; color: #000066; max-width: 1024px; min-width: 768px; margin: auto; } 
-		header { background-color: #869dc7; background-image: url("imgs/logo.gif"); background-repeat: no-repeat; color: #00005D; font-size: 150%; padding: 5px 20px 20px 90px; }
+		#wrapper { 	background-color: #ffffff; color: #000066; max-width: 1024px; min-width: 768px; margin: auto; } 
+		.header { background-color: #869dc7; background-image: url("imgs/logo.gif"); background-repeat: no-repeat; color: #00005D; font-size: 150%; padding: 5px 20px 20px 90px; }
+		#headerHome{ background-color: #869dc7; background-repeat: no-repeat; color: #00005D; font-size: 150%; padding: 5px 20px 20px; }		
 		header h1 { margin: 0;  }
 		h1 { margin-bottom: 0; } 
 		#tag { float: right;	padding-right: 20px; font-size: .80em; font-style: italic; text-align: right; color: #00005D; padding-top: 30px; }	        
@@ -33,7 +34,8 @@
 		nav a:link { color: #ffffff; }
 		nav a:visited { color: #eaeaea; }
 		nav a:hover {  color: #869dc7;}
-		main { margin-left: 155px; padding: 20px; background-color: #ffffff; color: #000000; } 
+		.main { margin-left: 155px; padding: 20px; background-color: #ffffff; color: #000000; } 
+		#mainHome { padding: 20px; background-color: #ffffff; color: #000000; text-align: center;} 
 		figure { margin: 10px; float: right; }
 		figcaption { font-size: 80%; font-style: italic; text-align: center; }
 		footer { font-size:70%; text-align: center; clear: right; padding: 20px; background-color: #869dc7; }
@@ -56,35 +58,15 @@
 <body>
 
 <div id="wrapper">
-	<header role="banner">
-		<div id="tag">[ Sign Out ] [ Upgrade ]</div>
-   	<h1>Shine</h1>
+	<header id="headerHome">
+   	<h1 style="text-align: center">Shine</h1>
   	</header>
-  	<nav role="navigation">
-   	<ul>
-      	<li><a href="profile.html">View Profile</a></li>
-      	<li><a href="edit.html">Edit Profile</a></li>
-      	<li><a href="addextra.html">Add Extra</a></li>
-      	<li><a href="editextra.html">Edit Extra</a></li>
-		</ul>
-  	</nav>
-  
-  	<main role="main">
-   		<figure>
-   		<img src="imgs/profile.jpg" width="240" height="240" alt="Profile picture">
-	 		<figcaption>Profile picture</figcaption>
-	 	</figure>
 
- 		<h1>My Profile</h1>
-   	
-		<h2>Profile Activity</h2>
-			<p>7/3/17 - Created profile</p>
-			<p>9/3/17 - Shared profile with abcde@gmail.com</p>
-			<p>9/3/17 - Profile acknowledged by abcde@gmail.com</p>
-			<p>10/3/17 - Received invitation from wxyz@outlook.com</p>
-				
+  
+  	<main id="mainHome">
+ 		<a href="login.html"><img src="imgs/bigLogo.gif"></a>
 	</main>   
-  <footer role="contentinfo">Copyright &copy; 2017
+  <footer role="contentinfo">T&C | Privacy Statement | About <br />Copyright &copy; 2017
     </footer>
 </div>
 </body>
