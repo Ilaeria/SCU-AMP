@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--****************************
+	*	MATERIAL DESIGN
+	*******************************-->
+	<!--
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	-->
+	<!--[if lt IE 9]>
+   	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>   
+	<![endif]--> 
+
+	<style>
+		header, nav, main, footer, figure, figcaption { display: block; }
+		body { font-family:Verdana, Arial, sans-serif; background-color: #00005D; }
+		#wrapper { 	background-color: #ffffff; color: #000066; max-width: 1024px; min-width: 768px; margin: auto; } 
+		.header { background-color: #869dc7; background-image: url("imgs/logo.gif"); background-repeat: no-repeat; color: #00005D; font-size: 150%; padding: 5px 20px 20px 90px; }
+		#headerHome{ background-color: #869dc7; background-repeat: no-repeat; color: #00005D; font-size: 150%; padding: 5px 20px 20px; }		
+		header h1 { margin: 0;  }
+		h1 { margin-bottom: 0; } 
+		#tag { float: right;	padding-right: 20px; font-size: .80em; font-style: italic; text-align: right; color: #00005D; padding-top: 30px; }	        
+		h2 { color: #869dc7; font-family: arial, sans-serif; }
+		nav { float: left; width: 160px; letter-spacing:0.1em; font-weight: bold; } 
+		nav ul { list-style-type: none; margin: 0; padding: 0; }
+		nav li { padding: 15px; }
+		nav a { text-decoration: none; }
+		nav a:link { color: #ffffff; }
+		nav a:visited { color: #eaeaea; }
+		nav a:hover {  color: #869dc7;}
+		.main { margin-left: 155px; padding: 20px; background-color: #ffffff; color: #000000; } 
+		#mainHome { padding: 20px; background-color: #ffffff; color: #000000; text-align: center;} 
+		figure { margin: 10px; float: right; }
+		figcaption { font-size: 80%; font-style: italic; text-align: center; }
+		footer { font-size:70%; text-align: center; clear: right; padding: 20px; background-color: #869dc7; }
+		#profileAlert1 { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 1px; }
+		/*************************************
+		/* RESPONSIVE CSS
+		/*************************************/
+		@media only screen and (max-width:1024px) {
+			main {margin-left: 0; }
+			nav {float: none; width: auto;}
+			body { margin: 0; }
+			nav li { display: inline-block; padding: 1em;}
+			nav ul { text-align: center; }
+			/*(nav a { border-style: none; }*/
+			h1, h2 { font-size: 120%; }
+			p { font-size: 90%; }
+		}
+	</style>
+</head>
+<body>
+
+<div id="wrapper">
+	<header id="headerHome">
+   	<h1 style="text-align: center">Shine</h1>
+  	</header>
+
+  
+  	<main id="mainHome">
+		<form name="login" id="login" method="post" action="main.html">
+			<h2>Sign in</h2>
+			Email<br />
+			<input type="text" name="email" id="email" required="required"><br />
+			Password <span style="text-align: right;">Forgot your password?</span><br />
+			<input type="text" name="password" id="password" required="required"><br />
+			<input type="submit" value="Sign in"><br /><br />
+		</form>
+		
+		<form name="signup" id="signup" method="post" action="join.html">	
+	 		New to Shine?<br />
+ 			<input type="submit" name="signup" id="signup" value="Create your Shine account">
+ 		</form>	
+	</main>   
+  <footer role="contentinfo">T&C | Privacy Statement | About <br />Copyright &copy; 2017
+    </footer>
+</div>
+</body>
+</html>
+
+
