@@ -5,73 +5,23 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/styles.css" media="screen">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!--****************************
-	*	MATERIAL DESIGN
-	*******************************-->
-	<!--
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-	-->
-	<!--[if lt IE 9]>
-   	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>   
-	<![endif]--> 
-
-	<!--
-    <style>
-		header, nav, main, footer, figure, figcaption { display: block; }
-		body { font-family:Verdana, Arial, sans-serif; background-color: #00005D; }
-		#wrapper { 	background-color: #b3c7e6; color: #000066; max-width: 1024px; min-width: 768px; margin: auto; } 
-		header { background-color: #869dc7; background-image: url("imgs/logo.gif"); background-repeat: no-repeat; color: #00005D; font-size: 150%; padding: 5px 20px 20px 90px; }
-		header h1 { margin: 0;  }
-		h1 { margin-bottom: 0; } 
-		#tag { float: right;	padding-right: 20px; font-size: .80em; font-style: italic; text-align: right; color: #00005D; padding-top: 30px; }	        
-		h2 { color: #869dc7; font-family: arial, sans-serif; }
-		nav { float: left; width: 160px; letter-spacing:0.1em; font-weight: bold; } 
-		nav ul { list-style-type: none; margin: 0; padding: 0; }
-		nav li { padding: 15px; }
-		nav a { text-decoration: none; }
-		nav a:link { color: #ffffff; }
-		nav a:visited { color: #eaeaea; }
-		nav a:hover {  color: #869dc7;}
-		main { margin-left: 155px; padding: 20px; background-color: #ffffff; color: #000000; } 
-		figure { margin: 10px; float: right; }
-		figcaption { font-size: 80%; font-style: italic; text-align: center; }
-		footer { font-size:70%; text-align: center; clear: right; padding: 20px; background-color: #869dc7; }
-		#profileAlert1 { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 1px; }
-		#profileAlert2 { background-color: #B71C1C; color: #EF9A9A; padding: 1px; }		
-		.simpleRow1 { background-color: #dadada; }
-		.simpleRow2 
-		/*************************************
-		/* RESPONSIVE CSS
-		/*************************************/
-		@media only screen and (max-width:1024px) {
-			main {margin-left: 0; }
-			nav {float: none; width: auto;}
-			body { margin: 0; }
-			nav li { display: inline-block; padding: 1em;}
-			nav ul { text-align: center; }
-			/*(nav a { border-style: none; }*/
-			h1, h2 { font-size: 120%; }
-			p { font-size: 90%; }
-		}
-	</style>
-	-->
 </head>
 <body>
 
 <div id="wrapper">
 	<header role="banner">
-		<div id="tag">[ Sign Out ] [ Upgrade ]</div>
+		<div id="tag">[ <a href="home.html">Sign Out</a> ] [ Upgrade ]</div>
    	<h1>Shine</h1>
   	</header>
   	<nav role="navigation">
    	<ul>
       	<li><a href="main.html">Main</a></li>
-      	<li><a href="">Edit Profile</a></li>
+      	<li><a href="edit.html">Edit Profile</a></li>
       	<li><a href="addextra.html">Add Extra</a></li>
-      	<li><a href="editextra.html">Edit Extra</a></li>
+			<form name="extraPage" id="extraPage" method="post" action="edit.html">
+				<input class="save" type="submit" value="SAVE">
+				<input class="save" type="submit" value="CANCEL">      	
+			</form>      	
 		</ul>
   	</nav>
   
@@ -82,11 +32,43 @@
 	 	</figure>
 
  		<h1>Add extra page</h1>
+
+   		<h2>Dislikes and Stressors</h2>
+   		<h3>Dislikes</h3>
+   		   	
+   	<div class="simpleRow1">
+   		<p>I don't like <input type="text" name="likes1" id="likes1" size="55">
+   		because of <input type="text" name="likes1" id="likes1" size="40">
+   		and <input type="text" name="likes1" id="likes1" size="40">. 
+   		<i>Comment on additional reasons why this is a concern</i>.</p>
+   	</div>	
+
+   	<div class="simpleRow2">   		
+   		<p>You can help me with this by <input type="text" name="likes1" id="likes1" size="55">, 
+   		specifically <input type="text" name="likes1" id="likes1" size="55">.</p>
+   	</div>
    	
-   	<div class="simpleRow1" style="max-width: 550px; height: 500px;">
-   		<p>
-	   		[EDIT  EXTRA-PAGE SCREEN]</p>
-   		</p>	
+		<div class="simpleRow1">   		  		
+   		<p>I can get quite agitated when <input type="text" name="likes1" id="likes1" size="55">. <i>
+   		Comment on additional reasons why this is a concern.</i> You can assist me by 
+   		<input type="text" name="likes1" id="likes1" size="55"> and 
+   		<input type="text" name="likes1" id="likes1" size="55">.</p>
+   	</div>	
+ 
+    	<h3>Stressors</h3>
+    		
+		<div class="simpleRow2">  		
+   		<p>I can become stressed or anxious if <input type="text" name="likes1" id="likes1" size="55">.
+   		You can help me with this by <input type="text" name="likes1" id="likes1" size="40"> and
+   		<input type="text" name="likes1" id="likes1" size="40">. Also, <input type="text" name="likes1" id="likes1" size="30">
+   		often helps. </p>
+   	</div>
+
+		<div class="simpleRow1">   		
+   		<p>If <input type="text" name="likes1" id="likes1" size="55"> happens I get really stressed. To assist
+   		me with this it is very important that you <input type="text" name="likes1" id="likes1" size="55">.
+   		If this does not work then you need to assist me by 
+   		<input type="text" name="likes1" id="likes1" size="55">.
 		</div>
 	</main>   
   <footer role="contentinfo">Copyright &copy; 2017

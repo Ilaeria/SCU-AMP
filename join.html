@@ -5,65 +5,6 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/styles.css" media="screen">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!--****************************
-	*	MATERIAL DESIGN
-	*******************************-->
-	<!--
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-	-->
-	<!--[if lt IE 9]>
-   	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>   
-	<![endif]--> 
-
-	<!--
-    <style>
-		header, nav, main, footer, figure, figcaption { display: block; }
-		body { font-family:Verdana, Arial, sans-serif; background-color: #00005D; }
-		#wrapper { 	background-color: #ffffff; color: #000066; max-width: 1024px; min-width: 768px; margin: auto; } 
-		.header { background-color: #869dc7; background-image: url("imgs/logo.gif"); background-repeat: no-repeat; color: #00005D; font-size: 150%; padding: 5px 20px 20px 90px; }
-		#headerHome{ background-color: #869dc7; background-repeat: no-repeat; color: #00005D; font-size: 150%; padding: 5px 20px 20px; }		
-		header h1 { margin: 0;  }
-		h1 { margin-bottom: 0; } 
-		#tag { float: right;	padding-right: 20px; font-size: .80em; font-style: italic; text-align: right; color: #00005D; padding-top: 30px; }	        
-		h2 { color: #869dc7; font-family: arial, sans-serif; }
-		nav { float: left; width: 160px; letter-spacing:0.1em; font-weight: bold; } 
-		nav ul { list-style-type: none; margin: 0; padding: 0; }
-		nav li { padding: 15px; }
-		nav a { text-decoration: none; }
-		nav a:link { color: #ffffff; }
-		nav a:visited { color: #eaeaea; }
-		nav a:hover {  color: #869dc7;}
-		.main { margin-left: 155px; padding: 20px; background-color: #ffffff; color: #000000; } 
-		#mainHome { padding: 20px; background-color: #ffffff; color: #000000; text-align: center;} 
-		figure { margin: 10px; float: right; }
-		figcaption { font-size: 80%; font-style: italic; text-align: center; }
-		footer { font-size:70%; text-align: center; clear: right; padding: 20px; background-color: #869dc7; }
-		#profileAlert1 { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 1px; }
-		/*************************************
-		/* FORMS
-		/*************************************/
-		.tooltip { position: relative; display: inline-block; }
-		.tooltip .tooltiptext { visibility: hidden; opacity: 0; transition: opacity 1s; font-size: small; float: right;}
-		.tooltip:hover	.tooltiptext { visibility: visible; opacity: 1; }	
-		
-		/*************************************
-		/* RESPONSIVE CSS
-		/*************************************/
-		@media only screen and (max-width:1024px) {
-			main {margin-left: 0; }
-			nav {float: none; width: auto;}
-			body { margin: 0; }
-			nav li { display: inline-block; padding: 1em;}
-			nav ul { text-align: center; }
-			/*(nav a { border-style: none; }*/
-			h1, h2 { font-size: 120%; }
-			p { font-size: 90%; }
-		}
-	</style>
-	-->
 </head>
 <body>
 
@@ -81,8 +22,8 @@
 		  </div>   
 
 		  <form method="post" id="joinform" name="joinform" action="join.php">
-			  <fieldset id="formnameandemail">
-				  <legend>Name</legend>
+			  <fieldset><legend><span class="formH2">Name</span></legend>			  
+			
 				  <div> <!-- simply holds names apart -->
 					  <label>Surname:</label>
 					  <input type="text" name="surname" id="surname" size = "50" maxlength = "50" required>
@@ -91,26 +32,22 @@
 				  <label>Other names:</label>
 				  <input type="text" name="othername" id="othername" size = "50" maxlength = "60" required >
 				  <span class = "requiredmarker">*</span>
-			  </fieldset>
+			  </fieldset><br /><br />
 
 
-			  <fieldset id="username"><legend>Username and Password:</legend>
-				  <div id ="usernamerow">
+			  <fieldset><legend><span class="formH2">Username and Password:</span></legend>
+				  <div>
 					  <label>Username:</label>
 					  <input type="text" name="joinusername" id="joinusername" size = "14" maxlength = "10"/>
 					  <span class = "requiredmarker">*</span>                           
-					  <!--<div class="tooltip" id = "tooltiptext">
-						  Please enter username<br>minimum 6 characters - maximum 10 characters
-					  </div>-->
 				  </div>
-
-
+			
 				  <div id ="passwordrow">
-					  <div class="tooltip">
 						  <label>Password:</label>
 						  <input type="password" name="userpass" id="userpass" size = "15" maxlength = "10"/>
 						  <span class = "requiredmarker">*</span>
-
+					</div>
+				  <div id ="passwordrow">
 					  <label>Verify password:</label>
 					 	 <input type="password" name="verifypass" id="verifypass" size = "15" maxlength = "40"/>
 					 	 <span class = "requiredmarker">*</span>                           
@@ -120,74 +57,52 @@
 						  		one lowercase letter, one number and one special character<br> 
 						  		with no whitespace allowed
 						  	</span>-->
-					  </div>                               
 				  </div>                  
-			  </fieldset>                                                          
+			  </fieldset><br /><br />                                                          
 
 	  
-			  <fieldset id="formcontact">
-				  <legend>Contact details</legend>
+			  <fieldset><legend><span class="formH2">Contact details</span></legend>
 				  <div id ="mobilerow">
 					  <label>Mobile:</label>
-					  <input type="text" name="mobilenum" id="mobilenum" size = "13" maxlength = "12" />
-					  <span class = "requiredmarker" id = "mobilemarker">*</span>
-					  <div class="popup" id = "mobilehelp">
-						  Enter mobile number in following format:<br>
-						  0[4 or 5]XX XXX XXX where X is a digit
-					  </div>                           
+					  <input type="text" name="mobilenum" id="mobilenum" size = "40" maxlength = "12"
+					  		placeholder="Enter mobile in format: DDDD DDD DDD" />
 				  </div>
 				  <div id ="phonerow">
 					  <label>Landline:</label>
-					  <input type="text" name="phonenum" id="phonenum" size = "13" maxlength = "13" />
-					  <span class = "requiredmarker" id = "phonemarker">*</span>  
-					  <div class="popup" id = "phonehelp">
-						  Enter phone number in following format:<br>
-						  (0[2,3,6,7,8 or 9]) XXXXXXXX where X is a digit
-					  </div>                               
+					  <input type="text" name="phonenum" id="phonenum" size = "40" maxlength = "13" 
+					  		placeholder="Enter landline in format: DD DDDD DDDD"/>
+					  
+					  <span class = "requiredmarker" id = "phonemarker">*</span>                                 
 				  </div>
 				  <div id ="emailrow">
 					  <label>Email:</label>
-					  <input type="email" name="email" id="email" size = "50" maxlength = "50"/>
+					  <input type="email" name="email" id="email" size = "50" maxlength = "50"
+					  		placeholder="Please enter valid email address"/>
 					  <span class = "requiredmarker" id = "emailmarker">*</span>                             
 					  <div class="popup" id = "emailhelp">
-						  Please enter valid email address
 					  </div>                               
 				  </div>
-			  </fieldset>
-			  <script type = "text/javascript">
-			<!--
-			 //turn off visibility of mobile and Landline (as email checked)
-			 mobilemarker.style.visibility = "hidden";
-			 phonemarker.style.visibility = "hidden";
-			-->
-		</script>
+			  </fieldset><br /><br />
+			  
  
 			  <fieldset id="formaddress">
-				  <legend>Address:</legend>
+				  <legend><span class="formH2">Address:</span></legend>
 				  <div id ="streetrow">
 						<label>Street address:</label>
-						<input type="text" name="streetaddr" id="streetaddr" size = "50" maxlength = "50" />
+						<input type="text" name="streetaddr" id="streetaddr" size = "50" maxlength = "50" 
+							placeholder="Please enter house number and street address"/>
 						<span class = "requiredmarker" id = "streetmarker">*</span>                              
-						<div class="popup" id = "streethelp">
-							 Please enter house number and street address
-						</div>                                  
 				  </div>
 				  <div id ="suburbrow">
 						<label>Suburb and State:</label>
-						<input type="text" name="suburbstate" id="suburbstate" size = "50" maxlength = "50" />
+						<input type="text" name="suburbstate" id="suburbstate" size = "50" maxlength = "50" 
+							placeholder = "Please enter suburb and state, seperated by a comma"/>
 						<span class = "requiredmarker" id = "suburbmarker">*</span>
-						<div class="popup" id = "suburbhelp">
-							 Please enter suburb and state separated by comma:<br>
-							 Suburb, State
-						</div>                                  
 				  </div>                     
 				  <div id ="postcoderow">
 						<label>Postcode:</label>
 						<input type="text" name="postcode" id="postcode" size = "4" maxlength = "4"/>
 						<span class = "requiredmarker" id = "postcodemarker">*</span>                              
-						<div class="popup" id = "postcodehelp">
-							 Please enter postcode maximum 4 digits
-						</div>                                  
 					</div>                                             
 			  </fieldset>        
 				
