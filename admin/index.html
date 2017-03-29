@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shine Admin</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../css/stylesAdmin.css" media="screen">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div id="wrapper">
+	<header id="headerHome">
+   	<h1 style="text-align: center">Shine</h1>
+  	</header>
+
+  
+  	<main id="mainHome">
+		<form name="login" id="login" method="post" action="main.html">
+			<fieldset>
+				<legend>
+					<span class="formH2">Administrator Sign in</span>	
+				</legend>
+				
+				Email<br /><input type="email" name="email" id="email" required="required"
+					placeholder="Your Email *" size=60><br />
+				Password<br />
+				<input type="password" name="password" id="password" required="required"
+					placeholder="Your password *" size=60><br />
+				<input type="submit" value="Sign in"><br />
+				<span style="font-size: small;"><a href="resetPassword.html">Forgot your password?</a></span>
+			</fieldset>
+		</form><br /><br />		
+		<form name="signup" id="signup" method="post" action="join.html">	
+			<fieldset>
+				<legend>
+					<span class="formH2">Request Admin Account</span>	
+				</legend>
+ 			<input type="submit" name="signup" id="signup" value="Request an admin account">
+	 		</fieldset>
+
+ 		</form>	
+	</main>   
+  <footer role="contentinfo">T&C | Privacy Statement | About <br />Copyright &copy; 2017
+    </footer>
+</div>
+</body>
+</html>
+
+

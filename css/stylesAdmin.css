@@ -1,0 +1,70 @@
+header, nav, main, footer, figure, figcaption { display: block; }
+body { font-family:Verdana, Arial, sans-serif; background-color: #003333; }
+#wrapper { 	background-color: #226666; color: #000066; max-width: 1024px; min-width: 768px; margin: auto; }
+header { background-color: #407F7F; background-image: url("imgs/logo.gif"); background-repeat: no-repeat; color: #003333; font-size: 150%; padding: 5px 20px 20px 90px; }
+#headerHome{ background-color: #407F7F; background-repeat: no-repeat; color: #003333; font-size: 150%; padding: 5px 20px 20px; }
+header h1 { margin: 0;  }
+h1 { margin-bottom: 0; }
+#tag { float: right;	padding-right: 20px; font-size: .80em; font-style: italic; text-align: right; color: #00005D; padding-top: 30px; }
+h2 { color: #869dc7; font-family: arial, sans-serif; }
+
+nav { float: left; width: 160px; letter-spacing:0.1em; font-weight: bold; }
+nav ul { list-style-type: none; margin: 0; padding: 0; }
+nav li { padding: 15px; }
+nav a { text-decoration: none; }
+nav a:link { color: #ffffff; }
+nav a:visited { color: #eaeaea; }
+nav a:hover {  color: #869dc7;}
+.save {margin-left: 0.3em; font-size: 1.2em;}
+
+main { margin-left: 155px; padding: 20px; background-color: #ffffff; color: #000000; }
+#mainHome { padding: 20px; background-color: #ffffff; color: #000000; text-align: center; margin: auto;}
+figure { margin: 10px; float: right; }
+figcaption { font-size: 80%; font-style: italic; text-align: center; }
+footer { font-size:70%; text-align: center; clear: right; padding: 20px; background-color: #407F7f; }
+#profileAlert1 { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 5px; }
+#profileAlert2 { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 5px; }
+.simpleRow1 { background-color: #dadada;  max-width: 550px; padding: 5px;}
+.simpleRow2{ background-color: #cccccc;  max-width: 550px; padding: 5px;}
+/*************************************
+/* FORMS
+/*************************************/
+input[type=button], input[type=submit], input[type=reset]{
+	border: none;
+	color: white;
+	padding: 12px 24px;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: #003333;
+	margin: 4px 2px;
+	font-size: 1em;
+}
+
+.formH2 {
+    background: #e0e0e1;
+    color: #666
+    height: 30px;
+    width: 280px;
+    display: inline-block;
+    font-size: 1.2em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+
+/*************************************
+/* RESPONSIVE CSS
+/*************************************/
+@media only screen and (max-width:1024px) {
+    main {margin-left: 0; }
+    nav {float: none; width: auto;}
+    body { margin: 0; }
+    nav li { display: inline-block; padding: 1em;}
+    nav ul { text-align: center; }
+    /*(nav a { border-style: none; }*/
+    h1, h2 { font-size: 120%; }
+    p { font-size: 90%; }
+}
