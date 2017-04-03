@@ -14,19 +14,34 @@
    	<h1>Shine</h1>
   	</header>
   	<nav role="navigation">
-   	
+   	   <ul>
+      	<li><a href="profile.html">View Profile</a></li>
+      	<li><a href="edit.html">Edit Profile</a></li>
+      	<li><a href="share.html">ShareProfile</a></li>
+      	<li><a href="settings.html">Settings</a></li>
+      	<li><a href="upgrade.html">Upgrade</a></li>
+		</ul>
   	</nav>
   
   	<main role="main">
    	
  		<h1>Share Profile</h1>
+ 		
  		<form action="main.html" method="post">
-			<input type="submit" name="shine" id="shine" value="Shine">
-			<input type="submit" name="facebook" id="facebook" value="Facebook">
-			<input type="submit" name="twitter" id="twitter" value="Twitter">
-			<input type="submit" name="email" id="email" value="email">
-			<input type="submit" name="pdf" id="pdf" value="PDF">
+			<fieldset>
+				<legend>Share profile via:</legend>
+				<input type="submit" name="shine" id="shine" value="Shine">
+				<input type="submit" name="email" id="email" value="Email">
+				<input type="submit" name="pdf" id="pdf" value="PDF">
+				<!--
+				The below options will be implemented in a future iteration
+				<input type="submit" name="facebook" id="facebook" value="Facebook" disabled="disabled">
+				<input type="submit" name="twitter" id="twitter" value="Twitter" disabled="disabled">
+				-->
+				<input type="submit" name="cancel" id="cancel" value="Cancel">				
+			</fieldset>
 		</form>
+		<br /><br /><br /><br />
 	</main>   
   <footer role="contentinfo">Copyright &copy; 2017
     </footer>

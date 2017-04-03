@@ -13,44 +13,32 @@
    	<h1 style="text-align: center">Shine</h1>
   	</header>
 
-  
   	<main id="mainHome">
-		<form name="join" id="join" method="post" action="main.html">
+		<form name="join" id="join" method="post" action="login.html">
 
-		  <div id = "compnote">
 			  <p>* = Compulsory field</p>
-		  </div>   
-
-		  <form method="post" id="joinform" name="joinform" action="join.php">
-			  <fieldset><legend><span class="formH2">Name</span></legend>			  
-			
-				  <div> <!-- simply holds names apart -->
-					  <label>Surname:</label>
-					  <input type="text" name="surname" id="surname" size = "50" maxlength = "50" required>
-					  <span class = "requiredmarker">*</span>
-				  </div>
-				  <label>Other names:</label>
-				  <input type="text" name="othername" id="othername" size = "50" maxlength = "60" required >
-				  <span class = "requiredmarker">*</span>
-			  </fieldset><br /><br />
+			  <fieldset>
+				  <legend><span class="formH2">Name</span></legend>			  
+				  <label>Surname:</label><input type="text" name="surname" id="surname" size = "50" maxlength = "50" >*<br />
+				  <label>Other names:</label><input type="text" name="othername" id="othername" size = "50" maxlength = "60" >*
+			  </fieldset>
+			  <br /><br />
 
 
 			  <fieldset><legend><span class="formH2">Username and Password:</span></legend>
 				  <div>
 					  <label>Username:</label>
-					  <input type="text" name="joinusername" id="joinusername" size = "14" maxlength = "10"/>
-					  <span class = "requiredmarker">*</span>                           
+					  <input type="text" name="joinusername" id="joinusername" size = "14" maxlength = "10"/>*
+
 				  </div>
 			
 				  <div id ="passwordrow">
 						  <label>Password:</label>
-						  <input type="password" name="userpass" id="userpass" size = "15" maxlength = "10"/>
-						  <span class = "requiredmarker">*</span>
+						  <input type="password" name="userpass" id="userpass" size = "15" maxlength = "10"/>*
 					</div>
 				  <div id ="passwordrow">
 					  <label>Verify password:</label>
-					 	 <input type="password" name="verifypass" id="verifypass" size = "15" maxlength = "40"/>
-					 	 <span class = "requiredmarker">*</span>                           
+					 	 <input type="password" name="verifypass" id="verifypass" size = "15" maxlength = "40"/>*                       
 					  	
 					  		<!--<span class="tooltiptext">
 						  		10 characters maximum containing at minimum one uppercase letter,<br>
@@ -62,26 +50,23 @@
 
 	  
 			  <fieldset><legend><span class="formH2">Contact details</span></legend>
-				  <div id ="mobilerow">
-					  <label>Mobile:</label>
-					  <input type="text" name="mobilenum" id="mobilenum" size = "40" maxlength = "12"
-					  		placeholder="Enter mobile in format: DDDD DDD DDD" />
-				  </div>
-				  <div id ="phonerow">
-					  <label>Landline:</label>
-					  <input type="text" name="phonenum" id="phonenum" size = "40" maxlength = "13" 
+				  	<div id ="phonerow">
+						<label>Phone:</label>
+					</div>
+				  	<div id ="phonerow">
+						<label>Landline:</label>
+					  	<input type="text" name="phonenum" id="phonenum" size = "40" maxlength = "13" 
 					  		placeholder="Enter landline in format: DD DDDD DDDD"/>
 					  
-					  <span class = "requiredmarker" id = "phonemarker">*</span>                                 
-				  </div>
-				  <div id ="emailrow">
-					  <label>Email:</label>
-					  <input type="email" name="email" id="email" size = "50" maxlength = "50"
-					  		placeholder="Please enter valid email address"/>
-					  <span class = "requiredmarker" id = "emailmarker">*</span>                             
-					  <div class="popup" id = "emailhelp">
-					  </div>                               
-				  </div>
+					  	<span class = "requiredmarker" id = "phonemarker">*</span>                                 
+				  	</div>
+				  	<div id ="emailrow">
+					  	<label>Email:</label>
+					  	<input type="email" name="email" id="email" size = "50" maxlength = "50"
+					  		placeholder="Please enter valid email address"/>                            
+					  	<div class="popup" id = "emailhelp">
+					  	</div>                               
+				  	</div>
 			  </fieldset><br /><br />
 			  
  

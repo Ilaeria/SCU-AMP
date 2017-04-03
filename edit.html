@@ -10,19 +10,15 @@
 
 <div id="wrapper">
 	<header role="banner">
-		<div id="tag">[ <a href="home.html">Sign Out</a> ] [ Upgrade ]</div>
+		<div id="tag">[ <a href="home.html">Sign Out</a> ]</div>
    	<h1>Shine</h1>
   	</header>
   	<nav role="navigation">
    	<ul>
-      	<li><a href="main.html">Main</a></li>
+      	<li><a href="profile.html">View Profile</a></li>
       	<li><a href="edit.html">Edit Profile</a></li>
-      		<form name="editPage" id="editPage" method="post" action="profile.html">
-					<input class="save" type="submit" value="SAVE">
-					<input class="save" type="submit" value="CANCEL">      	
-				</form>   
-      	<li><a href="addextra.html"> &gt Add Extra</a></li>
-      	<li><a href="editextra.html"> &gt Edit Extra</a></li>
+  			<li><a href="addextra.html"> &gt Add Extra</a></li>
+			<li><a href="editextra.html"> &gt Edit Extra</a></li>
 		</ul>
   	</nav>
   
@@ -30,10 +26,17 @@
    		<figure>
    		<img src="imgs/profile.jpg" width="240" height="240" alt="Profile picture">
 	 		<figcaption>Profile picture</figcaption>
-	 	</figure>
+	 	</figure> 
+		
+ 		<h1>Edit Profile</h1>
 
- 		<h1>Nvidia Hemmingway</h1>
-   	
+		<form name="editPage" id="editPage" method="post" action="profile.html">
+			<input class="save" type="submit" value="SAVE">
+			<input class="save" type="submit" value="CANCEL">
+			<input class="save" type="submit" value="PUBLISH">			
+			      	
+		</form>  
+		   	
     	<div id="profileMain">
    		<p>Age: 12</p>
    		<p>Contact: 0412 345 678</p>
