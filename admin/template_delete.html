@@ -24,11 +24,14 @@
   
   	<main role="main">
 
- 		<h1>Templates</h1>
-			<input type="button" value="Create Planning Template" onclick="window.location.href='template_create.html'">&nbsp;
-			<input type="button" value="Read Planning Template" onclick="window.location.href='template_read.html'">&nbsp;
-			<input type="button" value="Edit Planning Template" onclick="window.location.href='template_edit.html'">&nbsp;
-			<input type="button" value="Delete Planning Template" onclick="window.location.href='template_delete.html'"><br />
+ 		<h1>Choose a template to delete:</h1>
+		<ul id="templates_ul">
+			<li><input type="checkbox" id="t1">&nbsp; Template 1</li>
+			<li><input type="checkbox" id="t2">&nbsp; Template 2</li>
+			<li><input type="checkbox" id="t3">&nbsp; Template 3</li>
+		</ul>
+
+			<input type="button" value="Delete Planning Template" onclick="window.location.href='templates.html'"><br />
 			<br /><br /><br />												
 				
 	</main>   
