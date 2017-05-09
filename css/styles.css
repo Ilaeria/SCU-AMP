@@ -3,9 +3,10 @@ body { font-family:Verdana, Arial, sans-serif; background-color: #00005D; }
 #wrapper { 	background-color: #b3c7e6; color: #000066; max-width: 1024px; min-width: 768px; margin: auto; }
 header { background-color: #869dc7; background-image: url("../imgs/logo.gif"); background-repeat: no-repeat; color: #00005D; font-size: 150%; padding: 5px 20px 20px 90px; }
 #headerHome{ background-color: #869dc7; background-repeat: no-repeat; color: #00005D; font-size: 150%; padding: 5px 20px 20px; }
-header h1 { margin: 0;  }
+header h1 { margin: 0; }
 h1 { margin-bottom: 0; }
-#tag { float: right;	padding-right: 20px; font-size: .80em; font-style: italic; text-align: right; color: #00005D; padding-top: 30px; }
+.headerlink a { text-decoration: none; color: #00005D; }
+#tag { float: right; padding-right: 20px; font-size: .80em; font-style: italic; text-align: right; color: #00005D; padding-top: 30px; }
 h2 { color: #869dc7; font-family: arial, sans-serif; }
 
 nav { float: left; width: 160px; letter-spacing:0.1em; font-weight: bold; }
@@ -22,6 +23,7 @@ main { margin-left: 155px; padding: 20px; background-color: #ffffff; color: #000
 figure { margin: 10px; float: right; }
 figcaption { font-size: 80%; font-style: italic; text-align: center; }
 footer { font-size:70%; text-align: center; clear: right; padding: 20px; background-color: #869dc7; }
+footer a { text-decoration: none; color: #000066; }
 #profileAlert1 { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 5px; }
 #profileAlert2 { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 5px; }
 #profileTipsAlert { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 5px;}
