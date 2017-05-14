@@ -26,9 +26,11 @@ footer { font-size:70%; text-align: center; clear: right; padding: 20px; backgro
 footer a { text-decoration: none; color: #000066; }
 #profileAlert1 { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 5px; }
 #profileAlert2 { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 5px; }
-#profileTipsAlert { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 5px;}
+#profileTipsAlert { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 5px; }
 .simpleRow1 { background-color: #dadada;  max-width: 550px; padding: 5px;}
 .simpleRow2{ background-color: #cccccc;  max-width: 550px; padding: 5px;}
+#reportProfile { text-align: right; font-weight: bold; }
+
 /*************************************
 /* FORMS
 /*************************************/
