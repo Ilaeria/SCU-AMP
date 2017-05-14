@@ -9,7 +9,7 @@ h1 { margin-bottom: 0; }
 #tag { float: right; padding-right: 20px; font-size: .80em; font-style: italic; text-align: right; color: #00005D; padding-top: 30px; }
 h2 { color: #869dc7; font-family: arial, sans-serif; }
 
-nav { float: left; width: 160px; letter-spacing:0.1em; font-weight: bold; }
+nav { float: left; width: 180px; letter-spacing:0.1em; font-weight: bold; }
 nav ul { list-style-type: none; margin: 0; padding: 0; }
 nav li { padding: 15px; }
 nav a { text-decoration: none; }
@@ -18,7 +18,7 @@ nav a:visited { color: #eaeaea; }
 nav a:hover {  color: #869dc7;}
 .save {margin-left: 0.3em; font-size: 1.2em;}
 
-main { margin-left: 155px; padding: 20px; background-color: #ffffff; color: #000000; }
+main { margin-left: 175px; padding: 20px; background-color: #ffffff; color: #000000; }
 #mainHome { padding: 20px; background-color: #ffffff; color: #000000; text-align: center; margin: auto;}
 figure { margin: 10px; float: right; }
 figcaption { font-size: 80%; font-style: italic; text-align: center; }
