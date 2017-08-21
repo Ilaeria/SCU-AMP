@@ -31,6 +31,9 @@ footer a { text-decoration: none; color: #000066; }
 /*************************************
 /* FORMS
 /*************************************/
+fieldset legend { color: #869dc7; font-family: arial, sans-serif; font-size: 1.4em; font-weight: bold;  }
+
+
 input[type=button], input[type=submit], input[type=reset]{
 	border: none;
 	color: white;

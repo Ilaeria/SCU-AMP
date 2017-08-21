@@ -27,6 +27,7 @@ profileSection1 figcaption { font-size: 80%; font-style: italic; text-align: cen
 
 footer { font-size:70%; text-align: center; clear: right; padding: 20px; background-color: #869dc7; }
 footer a { text-decoration: none; color: #000066; }
+#profileCreate { background-color: #CCCCCC;  padding: 5px; margin: 5px solid #B71C1C; }
 #profileAlert1 { background-color: #B71C1C; color: #EF9A9A;  padding: 5px; margin: 5px solid #B71C1C; }
 #profileAlert2 { background-color: #B71C1C; color: #EF9A9A;  padding: 5px; }
 #profileTipsAlert { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 5px; }
@@ -39,6 +40,8 @@ table td { valign = "top"; }
 /*************************************
 /* FORMS
 /*************************************/
+fieldset legend { color: #869dc7; font-family: arial, sans-serif; }
+
 .ButtonStyleHREF, input[type=button], input[type=submit], input[type=reset]{
 	border: none;
 	color: white;

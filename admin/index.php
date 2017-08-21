@@ -84,15 +84,7 @@
 				<span style="font-size: small;"><a href="../resetPassword.html">Forgot your password?</a></span>
 			</fieldset>
 		</form><br /><br />		
-		<form name="signup" id="signup" method="post" action="join.html">	
-			<fieldset>
-				<legend>
-					<span class="formH2">Request Admin Account</span>	
-				</legend>
- 			<input type="submit" name="signup" id="signup" value="Request an admin account">
-	 		</fieldset>
-
- 		</form>	
+	
 	</main>
 	<footer role="contentinfo">
 		<a href="../contact.html" target="_blank">Contact</a> | <a href="../termsofuse.html" target="_blank">Terms of Use</a> | <a href="../privacy.html" target="_blank">Privacy Statement</a><br />Copyright &copy; 2017
