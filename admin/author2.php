@@ -1,72 +1,73 @@
 <?php
-	// Start session if not already started, to allow access to session variables
 	if(!isset($_SESSION)) 
     { 
         session_start(); 
-    }
+    } 
 
-	// Prompt user to log-in if not already logged-in
-	if(!isset($_SESSION['admin_logged_in']))
-	{ 
-		header("Location: index.php");
+	if(!isset($_SESSION['login']))
+	{ //if login in session is not set
+		header("Location: login.php");
 	}
 	
 	// Connect to database
 	include '../php_includes/db_connect.php';
-	$my_connection = db_connect();
+	$my_connection = db_connect();	
+?>
 
-	
-	//if admin_user has pressed submit in accounts.php form 
-	if($_SERVER["REQUEST_METHOD"] == "POST") 
-	{
-		switch($_POST["criteria"])
-		{
-			case "searchAuthorByAuthorID":  $query = "SELECT AUTHOR.AuthorID, AUTHOR.Email, AUTHOR.IsActive, AUTHOR.FirstName, AUTHOR.LastName, AUTHOR.DOB, 
-														AUTHOR.Street1, AUTHOR.Street2, AUTHOR.City, AUTHOR.StateAU, AUTHOR.Country, AUTHOR.ContactNumber
-														FROM AUTHOR
-														WHERE AUTHOR.AuthorID = ".$_POST["AccountSearch"];
-											break;
-											
-			case "searchAuthorByEmail":	$query = "SELECT AUTHOR.AuthorID, AUTHOR.Email, AUTHOR.IsActive, AUTHOR.FirstName, AUTHOR.LastName, AUTHOR.DOB, 
-														AUTHOR.Street1, AUTHOR.Street2, AUTHOR.City, AUTHOR.StateAU, AUTHOR.Country, AUTHOR.ContactNumber
-														FROM AUTHOR
-														WHERE AUTHOR.Email = ".$_POST["AccountSearch"];
-											break;
+<html>
+<head>
+	<title>
+	</title>
+</head>
+<body>
 
-			case "searchAuthorByLastName":	$query = "SELECT AUTHOR.AuthorID, AUTHOR.Email, AUTHOR.IsActive, AUTHOR.FirstName, AUTHOR.LastName, AUTHOR.DOB, 
-														AUTHOR.Street1, AUTHOR.Street2, AUTHOR.City, AUTHOR.StateAU, AUTHOR.Country, AUTHOR.ContactNumber
-														FROM AUTHOR
-														WHERE AUTHOR.LastName = ".$_POST["AccountSearch"];
-											break;
-		} // end switch
+	<?php
+		//Capture values posted from author.php
+			$AuthorID=$_POST["AuthorID"];
+			$Email_New=$_POST["Email"];
+			$IsActive_New=$_POST["IsActive"];
+			$FirstName_New=$_POST["FirstName"];
+			$LastName_New=$_POST["LastName"];
+			$DOB_New=$_POST["DOB"];
+			$Street1_New=$_POST["Street1"];
+			$Street2_New=$_POST["Street2"];
+			$City_New=$_POST["City"];
+			$State_New=$_POST["State"];
+			$Country_New=$_POST["Country"];
+			$ContactNumber_New=$_POST["ContactNumber"];
 		
-		//execute query
-		$result=mysqli_query($my_connection, $query);
+		//DEBUG
+		//echo($Content1_New);
+		
+		//Build SQL query
+		$query = "UPDATE AUTHOR
+					SET Email = '".$Email_New."', IsActive = '".$IsActive_New."', FirstName = '".$FirstName_New."',
+						LastName = '".$LastName_New."', DOB = '".$DOB_New."', Street1 = '".$Street1_New."', Street2 = '".$Street2_New."',
+						City = '".$City_New."', StateAU='".$State_New."', Country='".$Country_New."', ContactNumber='".$ContactNumber_New."'
+					WHERE AUTHOR.AuthorID = ".$AuthorID;
+
+		$result = mysqli_query($my_connection,$query);
 		if($result === false) 
 		{
 			// Handle failure - log the error, notify administrator, etc.
-			print("<p style=\"color:#FFFFFF;\">Error querying Shine database</p>");
+			print("<p style=\"color:#666;\">Error querying Shine database</p>");
+			print(mysqli_error($my_connection));
 		} 
-		else
+		else 
 		{
-			$num_rows=mysqli_num_rows($result);
-			$row=mysqli_fetch_row($result);
-			$num_fields=sizeof($row);
+			//update profile history
+			$event="Updated profile";
+			$query2="INSERT INTO PROFHIST VALUES (NULL, ".$_SESSION["ProfileID"].", '".date('l jS \of F Y h:i:s A')."', '".$event."')";
+			$result=mysqli_query($my_connection, $query2);
+			if ($result===false)
+				print("<h1>Failed to update profile history - ".mysqli_connect_error()."</h1>");
+			else
+				print("<h1>Profie Updated</h1>");
+		}			
 			
-			//display results
-			print("<table><tr>");
-			for ($i=0; $i<$num_rows; $i++) 
-			{
-				print("<tr>");
-				for($j=0; $j<$num_fields; $j++)
-				{	
-					print("<td>");
-					print($row[$j]);
-					print("</td>");
-				}
-			}
-			print("</tr>");
-			$row=mysqli_fetch_row($result); // get next row
-		} // end else
-	} // end if		
-?>
+
+		print("<a href=\"author.php\" class=\"ButtonStyleHREF\">CONTINUE</a>");		
+	?>
+	
+</body>
+</html>
