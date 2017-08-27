@@ -34,7 +34,7 @@
   	<nav role="navigation">
    	<ul>
       	<li><a href="main.php">Action</a></li>   	
-      	<li><a href="accounts.php">Authors</a></li>
+      	<li><a href="author.php">Authors</a></li>
       	<li><a href="profiles.php">Profiles</a></li>		
       	<li><a href="templates.html">Planning Templates</a></li>
       	<li><a href="database.html">Database</a></li>
