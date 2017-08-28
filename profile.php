@@ -53,7 +53,7 @@
 			*/
 
 			//Check how many Profiles Author has
-			$query="SELECT AUTHOR.AuthorID, PROFILE.ProfileID
+			$query="SELECT AUTHOR.AuthorID, PROFILE.ProfileID, PROFILE.FirstName, PROFILE.LastName	
 						FROM AUTHOR, PROFILE 
 						WHERE AUTHOR.AuthorID=".$_SESSION["AuthorID"];
 			$result = mysqli_query($my_connection,$query);
@@ -65,7 +65,6 @@
 			else 
 			{
 				$numProfiles =mysqli_num_rows($result);
-				$row = mysqli_fetch_row($result);
 				// If result matched $myusername and $mypassword, table row must be 1 row
 				if($numProfiles == 1) 
 				{
@@ -81,13 +80,16 @@
 					$profileRow=mysqli_fetch_row($result);
 					
 					//Create dropdown menu
+					//DEBUG - print($numProfiles."<br />");
 					print("<select name=\"profileList\">");
 					for ($i=0; $i<$numProfiles; $i++)
 					{
-						print("<option value=\"".$profileRow[1]."\"> ".$profileRow[1]."</option>");
+						//Element0=AuthorID; Element1=ProfileID; Element2=FirstName; Element3=LastName <= See order of elements in $query
+						print("<option value='".$profileRow[1]."'>".$profileRow[2]."</option>");
 						$profileRow=mysqli_fetch_row($result);
 					}
 					print("</select>");
+					print("<input type='submit' value='Submit'");
 				}
 				else
 				{
