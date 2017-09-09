@@ -7,8 +7,8 @@
 	Post-requisites: 	Profile data has been printed to screen
 -->
 
+	
 <?php
-	print("TEST - showProfile.php");
 	//Extract Profile Data
 	$query="SELECT Content1, Content2, Content3, Content4, Content5, Content6, Content7, Content8
 			FROM PROFILE WHERE ProfileID = ".$_SESSION["ProfileID"];
