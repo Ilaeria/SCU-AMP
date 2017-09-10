@@ -1,3 +1,13 @@
+<!--
+	Name: 				edit.php
+	Author: 			Stephen Manning
+	Date: 				10/9/17
+	Description: 		Prompts Author to select a Profile to edit
+	Pre-requisites: 	NA
+	Post-requisites: 	1.$_SESSION[ProfileID] has been set
+						2.editProfile.php has been invoked 
+-->
+
 <?php
 	if(!isset($_SESSION)) 
     { 
@@ -32,6 +42,7 @@
 
 	<nav role="navigation">
 		<ul>
+			<li><a href="profile_create.php">Create Profile</a></li>
 			<li><a href="profile.php">View Profile</a></li>
 			<li><a href="edit.php">Edit Profile</a></li>
 			<li><a href="share.html">Share Profile</a></li>

@@ -2,8 +2,8 @@
 	Name: 				editProfile.php
 	Author: 			Stephen Manning
 	Date: 				10/9/17
-	Description: 		Edits profile data. Used as an INCLUDE file.
-	Pre-requisites: 	(int)ProfileID is a defined variable
+	Description: 		Edits profile data after being invoked by edit.php. Used as an INCLUDE file.
+	Pre-requisites: 	$_SESSION[ProfileID] has been set
 	Post-requisites: 	Editable Profile data has been printed to screen
 -->
 
@@ -29,7 +29,7 @@
 
 	//Display Profile Page
 	
-		Print("<h1>Edit Profile!</h1>");
+		Print("<h1>Edit Profile</h1>");
 		print("<figure>
 			<img src=\"".$_SESSION['ImagePath1']."\" width=\"240\" height=\"240\" alt=\"Profile picture\">
 				<figcaption>Profile picture [Change]</figcaption>
