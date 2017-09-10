@@ -41,7 +41,7 @@
 	  
 		<main role="main">
 			<?php
-				//If Author has pressed Submit => Show Profile`
+				//If Author has pressed Submit, show Profile`
 				if(isset($_POST["submit"]))
 				{
 					//GetProfileID
@@ -79,7 +79,7 @@
 							//If Author has multiple Profiles
 							default: 
 								//Prompt for which profile to display
-								print("<p>Select a profile:</p>");
+								print("<p>Select a Profile to view:</p>");
 								//Fetch first row of Profiles
 								$profileRow=mysqli_fetch_row($result);
 
