@@ -2,9 +2,12 @@
 	Name: 				editProfile.php
 	Author: 			Stephen Manning
 	Date: 				10/9/17
-	Description: 		Edits profile data after being invoked by edit.php. Used as an INCLUDE file.
+	Description: 		Displayed editable profile data, after being invoked by edit.php.
+						If Author presses Save, edit2.php is invoked 
+						Used as an INCLUDE file.
 	Pre-requisites: 	$_SESSION[ProfileID] has been set
-	Post-requisites: 	Editable Profile data has been printed to screen
+	Post-requisites: 	1.Editable Profile data has been printed to screen
+						2.edit2.php has been invoked if Author chooses to Save 
 -->
 
 <?php
@@ -38,7 +41,7 @@
 		//print("<p>DOB: ".$_SESSION["DOB"]."</p>");
 		
 		//**************************BEGIN FORM**************************************
-		print("<form id=\"editProfile\" method=\"post\" action=\"php_includes\edit2.php\">");
+		print("<form id=\"editProfile\" method=\"post\" action=\"edit2.php\">");
 			print("<input type=\"submit\" id=\"submit\" value=\"Save\">");
 			print("<input type=\"reset\">");
 			print("<a href=\"profile.php\" class=\"ButtonStyleHREF\">Cancel</a>");

@@ -1,3 +1,13 @@
+<!--
+	Name: 				author.php
+	Author: 			Stephen Manning
+	Date: 				16/9/17
+	Description: 		Allows user to search for Author by Author ID, Email or LastName;
+						Displays results in table with hyperlinks to AuthorEditScreen (author2.php)
+	Pre-requisites: 	NA
+	Post-requisites: 	Table of Author(s) has been outputted to screen; each entry has hyperlink to AuthorEditScreen for that Author
+-->
+
 <?php
 	if(!isset($_SESSION)) 
     { 
@@ -13,8 +23,6 @@
 	include '../php_includes/db_connect.php';
 	$my_connection = db_connect();
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +50,7 @@
   	</nav>
   
   	<main role="main">
- 		<h1>Accounts</h1>
+ 		<h1>Author Administration</h1>
 		<form method="post" action="author.php">
 			<fieldset>
 				<legend>Find an Author</legend>
@@ -53,15 +61,13 @@
 				<input type="text" name="AuthorSearch">
 			</fieldset>
 
-			<input type="submit" name="Submit1" value="submit">
+			<input type="submit" name="submit" value="Submit">
 			<!--<input type="button" value="Suspend Account">&nbsp;<input type="button" value="Deactivate Account">-->
 		</form>
 	
 	<?php
-
-
 		//if admin_user has pressed Submit1 button in accounts.php form 
-		if(isset($_POST['Submit1'])) 
+		if(isset($_POST['submit']))
 		{
 			switch($_POST["criteria"])
 			{
@@ -74,13 +80,13 @@
 				case "searchAuthorByEmail":	$query = "SELECT AUTHOR.AuthorID, AUTHOR.Email, AUTHOR.IsActive, AUTHOR.FirstName, AUTHOR.LastName, AUTHOR.DOB, 
 															AUTHOR.Street1, AUTHOR.Street2, AUTHOR.City, AUTHOR.StateAU, AUTHOR.Country, AUTHOR.ContactNumber
 															FROM AUTHOR
-															WHERE AUTHOR.Email = \"".$_POST["AuthorSearch"]."\"";
+															WHERE AUTHOR.Email LIKE '%".$_POST["AuthorSearch"]."%'";
 												break;
 
 				case "searchAuthorByLastName":	$query = "SELECT AUTHOR.AuthorID, AUTHOR.Email, AUTHOR.IsActive, AUTHOR.FirstName, AUTHOR.LastName, AUTHOR.DOB, 
 															AUTHOR.Street1, AUTHOR.Street2, AUTHOR.City, AUTHOR.StateAU, AUTHOR.Country, AUTHOR.ContactNumber
 															FROM AUTHOR
-															WHERE AUTHOR.LastName = \"".$_POST["AuthorSearch"]."\"";			
+															WHERE AUTHOR.LastName LIKE '%".$_POST["AuthorSearch"]."%'";	
 												break;
 			} // end switch
 			
@@ -97,29 +103,16 @@
 				$row=mysqli_fetch_row($result);
 				$num_fields=sizeof($row);
 				
-				//Display results in form
-				print("<hr><form method=\"post\" action=\"author2.php\">");
-					for ($i=0; $i<$num_rows; $i++) 
-					{
-						print("<font style=\"font-weight:bold;\">Record ".$i."</font><br />");
-						print("<input type=\"hidden\" name=\"AuthorID\" value=\"".$row[0]."\"<br />");
-						print("Email: <input type=\"text\" name=\"Email\" value=\"".$row[1]."\"><br />");
-						print("Active: <input type=\"text\" name=\"IsActive\" value=\"".$row[2]."\"><br />");
-						print("<font style=\"font-size: 0;\">0=inactive; 1=active</font>");
-						print("First Name: <input type=\"text\" name=\"FirstName\" value=\"".$row[3]."\"><br />");
-						print("Last Name: <input type=\"text\" name=\"LastName\" value=\"".$row[4]."\"><br />");
-						print("DOB: <input type=\"text\" name=\"DOB\" value=\"".$row[5]."\"><br />");
-						print("Street1: <input type=\"text\" name=\"Street1\" value=\"".$row[6]."\"><br />");
-						print("Street2: <input type=\"text\" name=\"Street2\" value=\"".$row[7]."\"><br />");
-						print("City: <input type=\"text\" name=\"City\" value=\"".$row[8]."\"><br />");
-						print("State: <input type=\"text\" name=\"State\" value=\"".$row[9]."\"><br />");
-						print("Country: <input type=\"text\" name=\"Country\" value=\"".$row[10]."\"><br />");
-						print("Contact Number: <input type=\"text\" name=\"ContactNumber\" value=\"".$row[11]."\"><br />");
-					} //end for
-				
-				$row=mysqli_fetch_row($result); // get next row
-				print("<input type=\"submit\" name=\"Submit2\" value=\"Save\">");	
-				print("</form>");
+				//Display list of results with hyperlinks
+				//DEBUG - print($num_rows);
+				print("<table><tr><th>Email</th><th>Name</th></tr>");
+				for($i=0;$i<$num_rows;$i++) 
+				{
+					$profileURL="author2.php?AuthorID=".$row[0];
+					print("<tr><td><a href='".$profileURL."'>".$row[1]."</a></td><td><a href='".$profileURL."'>".$row[3]." ".$row[4]."</a></td></tr>");
+					$row=mysqli_fetch_row($result);
+				}//end for
+				print("</table>");
 			} // end else
 		} // end if		
 	?>

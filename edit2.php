@@ -1,3 +1,16 @@
+<!--
+	Name: 				edit2.php
+	Author: 			Stephen Manning
+	Date: 				10/9/17
+	Description: 		Updates Profile data after Author after being invoked by Author pressing Save in editProfile.php
+
+	Pre-requisites: 	Author has pressed Save in editProfile.php
+	Post-requisites: 	1.Profile has been updated with edited data
+						2. ProfileHistory has been updated
+-->
+
+
+
 <?php
 	if(!isset($_SESSION)) 
     { 
@@ -51,7 +64,7 @@
 		{
 			//update profile history
 			$event="Updated profile";
-			$query2="INSERT INTO PROFHIST VALUES (NULL, ".$_SESSION["ProfileID"].", '".date('l jS \of F Y h:i:s A')."', '".$event."')";
+			$query2="INSERT INTO PROFHIST VALUES (NULL, ".$_SESSION["ProfileID"].", '".date("l jS \of F Y h:i:s A")."', '".$event."')";
 			$result=mysqli_query($my_connection, $query2);
 			if ($result===false)
 				print("<h1>Failed to update profile history - ".mysqli_connect_error()."</h1>");
@@ -60,7 +73,7 @@
 		}			
 			
 
-		print("<a href=\"../profile.php\" class=\"ButtonStyleHREF\">CONTINUE</a>");		
+		print("<a href=\"profile.php\" class=\"ButtonStyleHREF\">CONTINUE</a>");		
 	?>
 	
 </body>
