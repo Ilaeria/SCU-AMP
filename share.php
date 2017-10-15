@@ -29,15 +29,9 @@
 		<div id="tag">[ <a href="index.html">Sign Out</a> ]</div>
 		<h1 class="headerlink" style="text-align: left"><a href="main.html">Shine</a></h1>
   	</header>
-  	<nav role="navigation">
-   	   <ul>
-      	<li><a href="profile.php">View Profile</a></li>
-      	<li><a href="edit.php">Edit Profile</a></li>
-      	<li><a href="share.php">Share Profile</a></li>
-      	<li><a href="settings.html">Settings</a></li>
-      	<li><a href="upgrade.html">Upgrade</a></li>
-		</ul>
-  	</nav>
+    <nav role="navigation">
+        <?php include('php_includes/navigation.php') ?>
+    </nav>
   
   	<main role="main">
    	
