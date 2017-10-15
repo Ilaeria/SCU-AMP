@@ -76,11 +76,15 @@
 				<legend>
 					<span class="formH2">Administrator Sign in</span>	
 				</legend>
-				
-				Email<br /><input type="email" name="email" id="email" placeholder="Your Email *" size=60><br />
-				Password<br />
-				<input type="password" name="password" id="password" placeholder="Your password *" size=60><br />
-				<input type="submit" value="Sign in"><br />
+				<div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Your Email" size=60 required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="Your password" size=60 required>
+                </div>
+                <input type="submit" value="Sign in"><br />
 				<span style="font-size: small;"><a href="../resetPassword.php">Forgot your password?</a></span>
 			</fieldset>
 		</form><br /><br />		
