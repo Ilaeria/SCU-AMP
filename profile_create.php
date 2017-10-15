@@ -31,6 +31,7 @@
 
 		<nav role="navigation">
 			<ul>
+				<li><a href="">Create Profile</a></li>
 				<li><a href="profile.php">View Profile</a></li>
 				<li><a href="edit.php">Edit Profile</a></li>
 				<li><a href="share.html">Share Profile</a></li>

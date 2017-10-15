@@ -7,6 +7,7 @@
 	include'php_includes/db_connect.php';
 	$my_connection = db_connect();
 	
+	//if user has pressed SUBMIT
 	if($_SERVER["REQUEST_METHOD"] == "POST") 
 	{
 		//print("<h1>Debug! - login.php - Detected POST</h1>");
@@ -17,12 +18,11 @@
 		//print("DEBUG - ".$email);
 		//print("<br />DEBUG - ".$password."<br />");
 		//Check logon credentials (plus other data to populate session variables)	
-		$query = "SELECT AUTHOR.AuthorID, AUTHOR.FirstName, AUTHOR.LastName, AUTHOR.DOB, AUTHOR.ContactNumber, 
-					PROFILE.ProfileID
-					FROM AUTHOR, PROFILE 
+		$query = "SELECT AuthorID, FirstName, LastName, DOB, ContactNumber 
+					FROM AUTHOR 
 					WHERE AUTHOR.Email = \"".$email."\" AND AUTHOR.Passwrd = \"".$password."\"";
 		$result = mysqli_query($my_connection,$query);
-		if($result === false) 
+		if($result === false)
 		{
 			// Handle failure - log the error, notify administrator, etc.
 			print("<p style=\"color:#FFFFFF;\">Error querying Shine database</p>");
@@ -33,7 +33,8 @@
 			//print("DEBUG - Count is ".$count);
 			$row = mysqli_fetch_row($result);	
 			// If result matched $myusername and $mypassword, table row must be 1 row
-			if($count == 1) {
+			if($count == 1) 
+			{
 				//set login to true
 				$_SESSION["login"] = true;
 				//set session variables
@@ -45,15 +46,13 @@
 				$_SESSION["ContactNumber"] = $row[4];
 				//$_SESSION["ImagePath1"] = "imgs/profiles/".$_SESSION["AuthorID"]."/".$row[5];
 				//select Profile. In a future iteration, an Author will be able to create, and select from, several profiles 
-				$_SESSION["ProfileID"] = $row[5];
+				//$_SESSION["ProfileID"] = $row[5];
 				
 				//navigate to main
 				header("location: main.php");
-
-
-
-				}
-			else {
+			}
+			else 
+			{
 			 $error = "Your Login Name or Password is invalid";
 			 print("<div style=\"text-align: center;\"><font style=\"color:#FFFFFF; \">".$error."</font></div>");
 			}

@@ -10,36 +10,35 @@
 	}
 	
 	// Connect to database
-	include 'db_connect.php';
+	include 'php_includes/db_connect.php';
 	$my_connection = db_connect();	
 ?>
 
 <html>
 <head>
-	<title>
-	</title>
+	<title>Create Profile</title>
 </head>
 <body>
 
 	<?php
-		//Capture values posted from edit.php
-			$Content1_New=$_POST["content1"];
-			$Content2_New=$_POST["content2"];
-			$Content3_New=$_POST["content3"];
-			$Content4_New=$_POST["content4"];
-			$Content5_New=$_POST["content5"];
-			$Content6_New=$_POST["content6"];
-			$Content7_New=$_POST["content7"];
+		//Capture values posted from profile_create.php
+			$Content1=$_POST["content1"];
+			$Content2=$_POST["content2"];
+			$Content3=$_POST["content3"];
+			$Content4=$_POST["content4"];
+			$Content5=$_POST["content5"];
+			$Content6=$_POST["content6"];
+			$Content7=$_POST["content7"];
 		
 		//DEBUG
 		//echo($Content1_New);
 		
-		//Build SQL query
-		$query = "UPDATE PROFILE
-					SET Content1 = '".$Content1_New."', Content2 = '".$Content2_New."', Content3 = '".$Content3_New."',
-						Content4 = '".$Content4_New."', Content5 = '".$Content5_New."', Content6 = '".$Content6_New."', Content7 = '".$Content7_New."'
-					WHERE PROFILE.AuthorID = ".$_SESSION["AuthorID"];
-
+		//Build Query
+		$query = "INSERT INTO PROFILE (AuthorID, Content1, Content2, Content3, Content4, Content5, Content6, Content7) 
+					VALUES (".$_SESSION["AuthorID"].",'".$Content1."', '".$Content2."', '".$Content3."',
+						'".$Content4."', '".$Content5."', '".$Content6."', '".$Content7."')";
+	
+		//Execute Query
 		$result = mysqli_query($my_connection,$query);
 		if($result === false) 
 		{
@@ -57,10 +56,9 @@
 				print("<h1>Failed to update profile history - ".mysqli_connect_error()."</h1>");
 			else
 				print("<h1>Profie Updated</h1>");
-		}			
-			
+		}
 
-		print("<a href=\"../profile.php\" class=\"ButtonStyleHREF\">CONTINUE</a>");		
+		print("<a href=\"profile.php\" class=\"ButtonStyleHREF\">CONTINUE</a>");		
 	?>
 	
 </body>
