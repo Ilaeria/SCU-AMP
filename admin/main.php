@@ -25,19 +25,8 @@
 <body>
 
 <div id="wrapper">
-	<header role="banner">
-		<div id='tag'><p>[ <a href='../php_includes/logout.php'>Sign Out</a> ]</div>
-		<h1 class="headerlink"><a href="main.php">Shine Administrator</a></h1>
-  	</header>
-  	<nav role="navigation">
-   	<ul>
-      	<li><a href="main.php">Action</a></li>   	
-      	<li><a href="author.php">Authors</a></li>
-      	<li><a href="profiles.php">Profiles</a></li>		
-      	<li><a href="templates.html">Planning Templates</a></li>
-      	<li><a href="database.html">Database</a></li>
-		</ul>
-  	</nav>
+
+    <?php include '../html_includes/admin_header_nav.inc'; ?>
   
   	<main role="main">
 
@@ -47,9 +36,7 @@
 			<p>9/3/17 - Received request for new admin account</p>
 				
 	</main>
-	<footer role="contentinfo">
-		<a href="../contact.html" target="_blank">Contact</a> | <a href="../termsofuse.html" target="_blank">Terms of Use</a> | <a href="../privacy.html" target="_blank">Privacy Statement</a><br />Copyright &copy; 2017
-	</footer>
+    <?php include '../html_includes/admin_footer.inc'; ?>
 </div>
 </body>
 </html>

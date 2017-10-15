@@ -86,9 +86,7 @@
 		</form><br /><br />		
 	
 	</main>
-	<footer role="contentinfo">
-		<a href="../contact.html" target="_blank">Contact</a> | <a href="../termsofuse.html" target="_blank">Terms of Use</a> | <a href="../privacy.html" target="_blank">Privacy Statement</a><br />Copyright &copy; 2017
-	</footer>
+    <?php include '../html_includes/admin_footer.inc'; ?>
 </div>
 </body>
 </html>
