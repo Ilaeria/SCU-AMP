@@ -42,7 +42,65 @@ footer a { text-decoration: none; color: #000066; }
 /*************************************
 /* FORMS
 /*************************************/
-fieldset legend { color: #869dc7; font-family: arial, sans-serif; }
+fieldset legend { color: #869dc7; font-family: arial, sans-serif; text-align: left;}
+
+form {
+    padding: 10px;
+}
+
+label {
+    float: left;
+    width: 150px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+input {
+    margin-top: 20px;
+    display: block;
+}
+
+input:valid, input:in-range {
+    background: #D9F2D9;
+    border-color: #40FB40;
+}
+
+input:invalid, input:out-of-range {
+    border-color: #BF4040;
+    background: #F2D9D9;
+}
+
+.infomessage {
+    font-weight: bold;
+    color: #BF4040;
+}
+
+select {
+    margin-top: 20px;
+    display: block;
+}
+
+.help {
+    font-size: 0.8em;
+    margin: 0.5em 0 0.5em 160px;
+    color: #757575;
+    display: block;
+    text-align: left;
+}
+
+fieldset {
+    margin: 10px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
+fieldset > div {
+    margin:10px 0;
+}
+
+fieldset > div:last-child {
+    margin-bottom:0;
+}
 
 .ButtonStyleHREF, input[type=button], input[type=submit], input[type=reset]{
 	border: none;
@@ -53,6 +111,7 @@ fieldset legend { color: #869dc7; font-family: arial, sans-serif; }
 	background-color: #00005d;
 	margin: 4px 2px;
 	font-size: 1em;
+    display: inline;
 }
 
 .formH2 {
@@ -70,10 +129,12 @@ fieldset legend { color: #869dc7; font-family: arial, sans-serif; }
 }
 
 textarea {
-     width: 100%;
-     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-     box-sizing: border-box;         /* Opera/IE 8+ */
+    width: 100%;
+    margin-top: 20px;
+    display: block;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 

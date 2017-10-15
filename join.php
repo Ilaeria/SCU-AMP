@@ -14,76 +14,74 @@
   	<main id="mainHome">
 		<form name="join" id="join" method="post" action="join2.php">
 			  <fieldset>
-				  <legend><span class="formH2">Name</span></legend>			  
-				  <label>Surname:</label><input type="text" name="surname" id="surname" size = "50" maxlength = "50" required />*<br />
-				  <label>Other names:</label><input type="text" name="othername" id="othername" size = "50" maxlength = "60" required />*
-			  </fieldset>
-			  <br /><br />
-
-
-			  <fieldset><legend><span class="formH2">Email and Password:</span></legend>
+				  <legend><span class="formH2">Name</span></legend>
 				  <div>
-					  <label>Email:</label>
-					  <input type="text" name="email" id="email" size = "50" maxlength = "100"
-					  placeholder="This will be your username for Shine" required />*
+                      <label for="surname">Surname:</label>
+                      <input name="surname" id="surname" size="50" maxlength="25" pattern="[A-Za-z-'\s]+" placeholder="Please enter your surname" required aria-required="true" aria-describedby="surname-format">
+                      <span id="surname-format" class="help">Required field. Letters, spaces, - or ' only. Max 25 characters.</span>
+                  </div>
+                  <div>
+                      <label for="othername">Other names:</label>
+                      <input name="othername" id="othername" size="50" maxlength="25" pattern="[A-Za-z-'\s]+" placeholder="Please enter your other names" required aria-required="true" aria-describedby="othername-format">
+                      <span id="othername-format" class="help">Required field. Letters, spaces, - or ' only. Max 25 characters.</span>
+                  </div>
+			  </fieldset>
 
+			  <fieldset><legend><span class="formH2">Email and Password</span></legend>
+				  <div>
+					  <label for="email">Email:</label>
+					  <input type="email" name="email" id="email" size="50" maxlength="100" placeholder="Please enter your email" required aria-required="true" aria-describedby="email-format">
+                      <span id="email-format" class="help">Required field. Valid email address required. This will be your username for Shine.</span>
 				  </div>
 			
-				  <div id ="passwordrow">
-						  <label>Password:</label>
-						  <input type="password" name="userpass" id="userpass" size = "35" maxlength = "20" required 
-						  placeholder = "Must contain at least 1 digit and 1 CAPS"/>*
-				  </div>
-				  <div id ="passwordrow">
-					  <label>Verify password:</label>
-					 	 <input type="password" name="verifypass" id="verifypass" size = "15" maxlength = "40" required />*
+				  <div>
+                      <label for="userpass">Password:</label>
+                      <input type="password" name="userpass" id="userpass" size = "50" maxlength = "25" pattern="\S{6,25}" placeholder = "Please enter your password" required aria-required="true" aria-describedby="userpass-format">
+                      <span id="othername-format" class="help">Required field. 6-25 characters.</span>
+                  </div>
+				  <div>
+					  <label for="verifypass">Verify password:</label>
+                      <input type="password" name="verifypass" id="verifypass" size = "50" maxlength = "25" pattern="\S{6,25}" placeholder="Please ensure passwords match" required aria-required="true" aria-describedby="verifypass-format">
+                      <span id="verifypass-format" class="help">Required field. 6-25 characters. Must match the previous field.</span>
 				  </div>                  
-			  </fieldset><br /><br />                                                          
-
+			  </fieldset>
 	  
 			  <fieldset><legend><span class="formH2">Contact Details</span></legend>
-				  	<div id ="phonerow">
-						<label>Phone:</label>
-					  	<input type="text" name="phonenum" id="phonenum" size = "45" maxlength = "13" 
-					  		placeholder="Use DIGITS only - e.g. 0458123456, 0212345678" required />
-					  	<span class = "requiredmarker" id = "phonemarker">*</span>                  
+				  	<div>
+						<label for="phonenum">Phone:</label>
+					  	<input name="phonenum" id="phonenum" size = "50" maxlength = "25" placeholder="Use numbers only - e.g. 0400123456, 0212345678" required aria-required="true" aria-describedby="phonenum-format">
+                        <span id="phonenum-format" class="help">Required field. Numbers only.</span>
 				  	</div>
-				  	
-			  </fieldset><br /><br />
-			  
- 
-			  <fieldset id="formaddress">
-				  <legend><span class="formH2">Address:</span></legend>
-				  <div id ="streetrow">
-						<label>Street address:</label>
-						<input type="text" name="streetaddr" id="streetaddr" size = "50" maxlength = "50" 
-							placeholder="Please enter house number and street address"  />
+			  </fieldset>
+
+			  <fieldset>
+				  <legend><span class="formH2">Address</span></legend>
+				  <div>
+						<label for="streetaddr">Street address:</label>
+						<input name="streetaddr" id="streetaddr" size="50" maxlength="25" placeholder="Please enter house number and street address" aria-describedby="streetaddr-format">
+                        <span id="streetaddr-format" class="help">Street number and name. Max 25 characters.</span>
 				  </div>
-				  <div id ="cityrow">
-						<label>City</label>
-						<input type="text" name="city" id="city" size = "50" maxlength = "30" 
-							placeholder = "Please enter city" />
+				  <div>
+						<label for="city">City:</label>
+						<input name="city" id="city" size="50" maxlength="25" placeholder="Please enter city" aria-describedby="city-format">
+                        <span id="city-format" class="help">City. Max 25 characters.</span>
 				  </div>                     
-				  <div id ="staterow">
-						<label>State</label>
-						<input type="text" name="state" id="state" size = "50" maxlength = "30" 
-							placeholder = "Please enter state" />
+				  <div>
+						<label for="state">State:</label>
+						<input name="state" id="state" size="50" maxlength="25" placeholder="Please enter state" aria-describedby="state-format">
+                        <span id="state-format" class="help">State. Max 25 characters.</span>
 				  </div>
-				  <div id ="postcoderow">
-						<label>Postcode:</label>
-						<input type="text" name="postcode" id="postcode" size = "4" maxlength = "4"  />
-						
-					</div>
-			  </fieldset>       
-			  <p>* = Compulsory field</p>
-			  <div id="formbuttons">
-				  <input type="submit" name = "submit" id = "submit" value="Join Shine now"/>&nbsp;&nbsp;
-				  <input type="reset" />
+				  <div>
+						<label for="postcode">Postcode:</label>
+						<input name="postcode" id="postcode" size = "4" maxlength = "4" pattern="[0-9]{4}" aria-describedby="postcode-format">
+                        <span id="postcode-format" class="help">Postcode. 4 digits only.</span>
+                  </div>
+			  </fieldset>
+			  <div style="text-align: left">
+				  <input type="submit" name="submit" id="submit" value="Join Shine Now" style="margin-left: 10px">
+				  <input type="reset" name="reset" id="reset" Value="Reset" style="margin-left: 10px">
 			  </div>
 		  </form>
-		
-		<!-- Register event handlers -->
-		<script type = "text/javascript" src = "scripts/register_form_events.js"></script>
 	</main>
     <?php include 'html_includes/footer.inc'; ?>
 </div>
