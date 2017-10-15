@@ -66,7 +66,7 @@
 
 <div id="wrapper">
 	<header id="headerHome">
-		<h1 class="headerlink" style="text-align: center"><a href="index.html">Shine Administrator</a></h1>
+		<h1 class="headerlink" style="text-align: center"><a href="index.php">Shine Administrator</a></h1>
   	</header>
 
   
@@ -81,7 +81,7 @@
 				Password<br />
 				<input type="password" name="password" id="password" placeholder="Your password *" size=60><br />
 				<input type="submit" value="Sign in"><br />
-				<span style="font-size: small;"><a href="../resetPassword.html">Forgot your password?</a></span>
+				<span style="font-size: small;"><a href="../resetPassword.php">Forgot your password?</a></span>
 			</fieldset>
 		</form><br /><br />		
 	

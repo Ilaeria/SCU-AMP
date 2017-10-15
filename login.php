@@ -71,12 +71,8 @@
 </head>
 <body>
 
-
-	
 <div id="wrapper">
-	<header id="headerHome">
-		<h1 class="headerlink" style="text-align: center"><a href="index.php">Shine</a></h1>
-  	</header>
+    <?php include 'html_includes/guest_header.inc'; ?>
   
   	<main id="mainHome">
 		<form name="login" id="login" method="post" action="">
@@ -85,9 +81,9 @@
 					<span class="formH2">Sign in</span>	
 				</legend>
 				
-				Email<br /><input type="email" name="email" id="email" placeholder="Your Email *" size=60><br />
+				Email<br /><input type="email" name="email" id="email" placeholder="Your Email *" size=60 required><br />
 				Password<br />
-				<input type="password" name="password" id="password" placeholder="Your password *" size=60><br />
+				<input type="password" name="password" id="password" placeholder="Your password *" size=60 required><br />
 				<input type="submit" value="Sign in"><br />
 				<id="error"></id>
 				<span style="font-size: small;"><a href="resetPassword.php">Forgot your password?</a></span>

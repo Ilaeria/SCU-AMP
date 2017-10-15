@@ -14,7 +14,7 @@
   
   	<main role="main">
  		<h1>Settings</h1><br />
-		<form method="post" action="main.html">
+		<form method="post" action="main.php">
 			<fieldset>
 				<legend><span class="formH2">Colour</span></legend>
 				<input type="radio" name="colour" id="standard" value="standard">Standard</input>

@@ -10,11 +10,11 @@
 
 <div id="wrapper">
 	<header id="headerHome">
-		<h1 class="headerlink" style="text-align: center"><a href="index.html">Shine Administrator</a></h1>
+		<h1 class="headerlink" style="text-align: center"><a href="index.php">Shine Administrator</a></h1>
   	</header>
 
   	<main id="mainHome">
-		<form name="join" id="join" method="post" action="index.html">
+		<form name="join" id="join" method="post" action="index.php">
 
 			  <p>* = Compulsory field</p>
 			  <fieldset>

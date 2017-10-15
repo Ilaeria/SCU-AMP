@@ -15,7 +15,7 @@
   	<main role="main">
  		<h1>Upgrade</h1><br />
  		<p>Your level is: Simple profile</p>
-		<form method="post" action="main.html">
+		<form method="post" action="main.php">
 			<fieldset>
 				<legend><span class="formH2">Simple profile</span></legend>
 				<ul>

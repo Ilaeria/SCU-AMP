@@ -9,9 +9,7 @@
 <body>
 
 <div id="wrapper">
-	<header id="headerHome">
-		<h1 class="headerlink" style="text-align: center"><a href="index.html">Shine</a></h1>
-  	</header>
+    <?php include 'html_includes/guest_header.inc'; ?>
 
   	<main id="mainHome">
 		<form name="join" id="join" method="post" action="join2.php">

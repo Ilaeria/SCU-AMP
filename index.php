@@ -9,12 +9,10 @@
 <body>
 
 <div id="wrapper">
-	<header id="headerHome">
-		<h1 class="headerlink" style="text-align: center"><a href="index.php">Welcome to Shine</a></h1>
-  	</header>
+    <?php include 'html_includes/guest_header.inc'; ?>
 
   	<main id="mainHome">
- 		<h2 style="text-align: center">Please click the lightbulb to begin your journey</h2>
+ 		<h2 style="text-align: center">Welcome - please click the lightbulb to begin your journey</h2>
 		<a href="login.php"><img src="imgs/bigLogo.gif"></a>
 	</main>
 	<?php include 'html_includes/footer.inc'; ?>

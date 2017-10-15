@@ -38,9 +38,7 @@
 </head>
 <body>
     <div id="wrapper">
-        <header id="headerHome">
-            <h1 class="guestlink"><a href="index.php">Shine</a></h1>
-        </header>
+        <?php include 'html_includes/guest_header.inc'; ?>
 
         <main id="guestHome">
             <h2>Contact Us</h2>
