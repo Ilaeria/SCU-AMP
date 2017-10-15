@@ -1,0 +1,3 @@
+<footer role="contentinfo">
+    <a href="contact.php" target="_blank">Contact</a> | <a href="termsofuse.php" target="_blank">Terms of Use</a> | <a href="privacy.php" target="_blank">Privacy Statement</a><br />Copyright &copy; 2017
+</footer>

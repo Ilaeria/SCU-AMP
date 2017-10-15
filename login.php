@@ -75,7 +75,7 @@
 	
 <div id="wrapper">
 	<header id="headerHome">
-		<h1 class="headerlink" style="text-align: center"><a href="index.html">Shine</a></h1>
+		<h1 class="headerlink" style="text-align: center"><a href="index.php">Shine</a></h1>
   	</header>
   
   	<main id="mainHome">
@@ -103,9 +103,7 @@
 	 		</fieldset>
  		</form>	
 	</main>
-	<footer role="contentinfo">
-		<a href="contact.html" target="_blank">Contact</a> | <a href="termsofuse.html" target="_blank">Terms of Use</a> | <a href="privacy.html" target="_blank">Privacy Statement</a><br />Copyright &copy; 2017
-	</footer>
+    <?php include 'html_includes/footer.inc'; ?>
 </div>
 </body>
 </html>

@@ -24,21 +24,8 @@
 </head>
 <body>
 	<div id="wrapper">
-		<header role="banner">
-			<div id="tag">[ <a href="index.html">Sign Out</a> ] </div>
-			<h1 class="headerlink" style="text-align: left"><a href="main.php">Shine</a></h1>
-		</header>
 
-		<nav role="navigation">
-			<ul>
-				<li><a href="">Create Profile</a></li>
-				<li><a href="profile.php">View Profile</a></li>
-				<li><a href="edit.php">Edit Profile</a></li>
-				<li><a href="share.html">Share Profile</a></li>
-				<li><a href="settings.html">Settings</a></li>
-				<li><a href="upgrade.html">Upgrade</a></li>
-			</ul>
-		</nav>
+        <?php include 'html_includes/header_nav.inc'; ?>
 	  
 		<main role="main">
 			<h1>Create a Profile</h1>
@@ -101,10 +88,7 @@
 				<a href="profile.php" class="ButtonStyleHREF">Cancel</a>		
 			</form>
 		</main>
-		<footer role="contentinfo">
-			<a href="contact.html" target="_blank">Contact</a> | <a href="termsofuse.html" target="_blank">Terms of Use</a> | <a href="privacy.html" 
-				target="_blank">Privacy Statement</a><br />Copyright &copy; 2017
-		</footer>
+        <?php include 'html_includes/footer.inc'; ?>
 	</div>
 </body>
 </html>
