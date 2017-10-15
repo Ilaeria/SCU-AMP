@@ -90,11 +90,11 @@
 				<input type="password" name="password" id="password" placeholder="Your password *" size=60><br />
 				<input type="submit" value="Sign in"><br />
 				<id="error"></id>
-				<span style="font-size: small;"><a href="resetPassword.html">Forgot your password?</a></span>
+				<span style="font-size: small;"><a href="resetPassword.php">Forgot your password?</a></span>
 			</fieldset>
 		</form><br /><br />	
 		
-		<form name="signup" id="signup" method="post" action="join.html">	
+		<form name="signup" id="signup" method="post" action="join.php">
 			<fieldset>
 				<legend>
 					<span class="formH2">New to Shine?</span>	

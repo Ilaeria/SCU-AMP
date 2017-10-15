@@ -6,6 +6,7 @@ header { background-color: #869dc7; background-image: url("../imgs/logo.gif"); b
 header h1 { margin: 0; font-size: 30px;}
 h1 { margin-bottom: 0; font-size:28px; }
 .headerlink a { text-decoration: none; color: #00005D; }
+.guestlink a {text-decoration: none; color: #00005D; margin-left: 30px; }
 #tag { float: right; padding-right: 20px; font-size: .5em; font-style: italic; text-align: right; color: #00005D; padding-top: 28px; margin: 2px; }
 /*#tag a { float: right; padding-right: 20px; font-size: .3em; font-style: italic; text-align: right; color: #00005D; padding-top: 1px; }*/
 h2 { color: #869dc7; font-family: arial, sans-serif; }
@@ -21,21 +22,22 @@ nav a:hover {  color: #869dc7;}
 
 main { margin-left: 175px; padding: 20px; background-color: #ffffff; color: #000000; }
 #mainHome { padding: 20px; background-color: #ffffff; color: #000000; text-align: center; margin: auto;}
+#guestHome { padding: 20px; background-color: #ffffff; color: #000000; margin: auto;}
 
 profileSection1 figure { margin: 10px; float: left; }
 profileSection1 figcaption { font-size: 80%; font-style: italic; text-align: center; }
 
 footer { font-size:70%; text-align: center; clear: right; padding: 20px; background-color: #869dc7; }
 footer a { text-decoration: none; color: #000066; }
-#profileCreate { background-color: #CCCCCC;  padding: 5px; margin: 5px solid #B71C1C; }
-#profileAlert1 { background-color: #B71C1C; color: #EF9A9A;  padding: 5px; margin: 5px solid #B71C1C; }
+#profileCreate { background-color: #CCCCCC;  padding: 5px; border: 5px solid #B71C1C; }
+#profileAlert1 { background-color: #B71C1C; color: #EF9A9A;  padding: 5px; border: 5px solid #B71C1C; }
 #profileAlert2 { background-color: #B71C1C; color: #EF9A9A;  padding: 5px; }
 #profileTipsAlert { background-color: #B71C1C; color: #EF9A9A; max-width: 550px; padding: 5px; }
 .simpleRow1 { color: #2d2d2d; background-color: #dadada;   padding: 5px; margin: 0 5px 0 5px;}
 .simpleRow2{ color: #2d2d2d; background-color: #cccccc;   padding: 5px; margin: 0 5px 0 5px;}
 #reportProfile { text-align: right; font-weight: bold; }
 
-table td { valign = "top"; }
+/* table td { valign:"top"; } */
 
 /*************************************
 /* FORMS
